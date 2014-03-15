@@ -3,7 +3,7 @@ from flask import Flask, render_template, send_file, abort
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://planetbobble:planetbobble@localhost/planetbobble'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database/main.db'
 db = SQLAlchemy(app)
 # To create database: db.create_all()
 
